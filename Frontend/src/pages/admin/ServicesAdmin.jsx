@@ -5,4 +5,4 @@ export default function ServicesAdmin() {
       <p>CRUD for services.</p>
     </div>
   );
-}
+}  
