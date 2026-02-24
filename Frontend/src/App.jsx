@@ -46,7 +46,8 @@ export default function App() {
       <Route path="/admin/services" element={<ServicesAdmin />} />
       <Route path="/admin/case-studies" element={<CaseStudiesAdmin />} />
       <Route path="/admin/projects" element={<ProjectsAdmin />} />
-
+      <Route path="/contact" element={<Contact />} />
+     <Route path="/services" element={<Services />} />
     </Routes>
   );
 }
