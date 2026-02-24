@@ -5,6 +5,7 @@ import WebsiteLayout from "./components/WebsiteLayout";
 import Home from "./pages/Website/Home";
 import About from "./pages/website/About";
 import Services from "./pages/website/Services";
+import Industries from "./pages/Website/Industries";
 import CaseStudies from "./pages/website/CaseStudies";
 import Careers from "./pages/website/Careers";
 import Contact from "./pages/website/Contact";
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/industries" element={<Industries />} />
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<Contact />} />
