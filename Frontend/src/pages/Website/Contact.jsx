@@ -1,129 +1,193 @@
+
 import { useState } from "react";
+import "./Contact.css";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
+  const [form, setForm] = useState({
     name: "",
     email: "",
     password: "",
-    country: "",
-    industry: "",
+    company: "",
+    phone: "",
     service: "",
     budget: "",
-    currency: "",
-    message: "",
+    message: ""
   });
-
-  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    setFormData({ ...formData, [name]: value });
-    setError("");
+    // password ko max 8 characters tak hi allow
+    if (name === "password" && value.length > 8) return;
+
+    setForm({ ...form, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (formData.password.length !== 8) {
-      setError("Password must be exactly 8 characters.");
-      return;
-    }
+    console.log(form);
+    alert("Form submitted successfully");
 
-    alert("Form Submitted Successfully ✅");
-    console.log(formData);
+    setForm({
+      name: "",
+      email: "",
+      password: "",
+      company: "",
+      phone: "",
+      service: "",
+      budget: "",
+      message: ""
+    });
   };
 
   return (
-    <div className="page">
-      <h1>Contact Us</h1>
+    <div className="contact-page">
+      <div className="contact-wrapper">
 
-      <p>TechNova Ltd</p>
-      <p>124 City Road, London, EC1V 2NX, United Kingdom</p>
-      <p>Email: info@technova-uk.com</p>
-      <p>Phone: +44 20 7946 0857</p>
-      <p>Company Registration No: 14873291</p>
+        {/* Left panel */}
+        <div className="contact-info-panel">
+          <h2>Contact Us</h2>
+          <p>
+            Please fill the form and our team will contact you shortly.
+          </p>
 
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          required
-          onChange={handleChange}
-        />
+          <div className="contact-meta">
+            <div>
+              <span>Email</span>
+              <p>info@technova.com</p>
+            </div>
+            <div>
+              <span>Phone</span>
+              <p>+91 98765 43210</p>
+            </div>
+            <div>
+              <span>Location</span>
+              <p>Ahmedabad, India</p>
+            </div>
+          </div>
+        </div>
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          required
-          onChange={handleChange}
-        />
+        {/* Right panel */}
+        <div className="contact-form-panel">
 
-        <input
-          type="password"
-          name="password"
-          placeholder="Create Password (8 characters only)"
-          required
-          onChange={handleChange}
-        />
+          <div className="form-header">
+            <h3>Send your enquiry</h3>
+            <p>All fields are confidential</p>
+          </div>
 
-        {error && <p className="error">{error}</p>}
+          <form className="pro-form" onSubmit={handleSubmit}>
 
-        <input
-          type="text"
-          name="country"
-          placeholder="Country"
-          required
-          onChange={handleChange}
-        />
+            <div className="form-grid">
 
-        <input
-          type="text"
-          name="industry"
-          placeholder="Industry"
-          required
-          onChange={handleChange}
-        />
+              <div className="form-group">
+                <label>Full Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
 
-        <input
-          type="text"
-          name="service"
-          placeholder="Service Interested"
-          required
-          onChange={handleChange}
-        />
+              <div className="form-group">
+                <label>Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
 
-        <input
-          type="number"
-          name="budget"
-          placeholder="Estimated Budget"
-          required
-          onChange={handleChange}
-        />
+              {/* ✅ PASSWORD FIELD (max 8 characters) */}
+              <div className="form-group">
+                <label>Password (max 8 characters)</label>
+                <input
+                  type="password"
+                  name="password"
+                  value={form.password}
+                  onChange={handleChange}
+                  maxLength={8}
+                  required
+                />
+              </div>
 
-        <select
-          name="currency"
-          required
-          onChange={handleChange}
-        >
-          <option value="">Select Currency</option>
-          <option value="USD">USD</option>
-          <option value="GBP">GBP</option>
-          <option value="INR">INR</option>
-          <option value="EUR">EUR</option>
-        </select>
+              <div className="form-group">
+                <label>Company</label>
+                <input
+                  type="text"
+                  name="company"
+                  value={form.company}
+                  onChange={handleChange}
+                />
+              </div>
 
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          required
-          onChange={handleChange}
-        />
+              <div className="form-group">
+                <label>Phone</label>
+                <input
+                  type="text"
+                  name="phone"
+                  value={form.phone}
+                  onChange={handleChange}
+                />
+              </div>
 
-        <button type="submit">Submit</button>
-      </form>
+              <div className="form-group">
+                <label>Service</label>
+                <select
+                  name="service"
+                  value={form.service}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value=""></option>
+                  <option>Web Development</option>
+                  <option>Mobile App Development</option>
+                  <option>Cloud & DevOps</option>
+                  <option>AI & Automation</option>
+                  <option>UI / UX Design</option>
+                </select>
+              </div>
+
+              <div className="form-group">
+                <label>Budget</label>
+                <select
+                  name="budget"
+                  value={form.budget}
+                  onChange={handleChange}
+                >
+                  <option value=""></option>
+                  <option>Below 50,000</option>
+                  <option>50,000 – 2,00,000</option>
+                  <option>2,00,000 – 5,00,000</option>
+                  <option>Above 5,00,000</option>
+                </select>
+              </div>
+
+            </div>
+
+            <div className="form-group full">
+              <label>Message</label>
+              <textarea
+                name="message"
+                rows="5"
+                value={form.message}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <button type="submit" className="submit-btn">
+              Submit
+            </button>
+
+          </form>
+        </div>
+
+      </div>
     </div>
   );
 }
