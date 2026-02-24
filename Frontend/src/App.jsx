@@ -1,35 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route } from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0)
+import WebsiteLayout from "./components/WebsiteLayout";
 
+import Home from "./pages/website/Home";
+import About from "./pages/website/About";
+import Services from "./pages/website/Services";
+import Industries from "./pages/website/Industries";
+import CaseStudies from "./pages/website/CaseStudies";
+import Careers from "./pages/website/Careers";
+import Contact from "./pages/website/Contact";
+
+import Login from "./pages/auth/Login";
+import Dashboard from "./pages/client/Dashboard";
+import ProjectDetail from "./pages/client/ProjectDetail";
+
+import Leads from "./pages/admin/Leads";
+import ServicesAdmin from "./pages/admin/ServicesAdmin";
+import CaseStudiesAdmin from "./pages/admin/CaseStudiesAdmin";
+import ProjectsAdmin from "./pages/admin/ProjectsAdmin";
+
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Routes>
 
-export default App
+      
+      <Route element={<WebsiteLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/industries" element={<Industries />} />
+        <Route path="/case-studies" element={<CaseStudies />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/contact" element={<Contact />} />
+      </Route>
+
+      
+      <Route path="/login" element={<Login />} />
+
+    
+      <Route path="/client/dashboard" element={<Dashboard />} />
+      <Route path="/client/project/:id" element={<ProjectDetail />} />
+
+      
+      <Route path="/admin/leads" element={<Leads />} />
+      <Route path="/admin/services" element={<ServicesAdmin />} />
+      <Route path="/admin/case-studies" element={<CaseStudiesAdmin />} />
+      <Route path="/admin/projects" element={<ProjectsAdmin />} />
+
+    </Routes>
+  );
+}
