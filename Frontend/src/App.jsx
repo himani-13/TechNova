@@ -6,9 +6,9 @@ import Home from "./pages/Website/Home";
 import About from "./pages/website/About";
 import Services from "./pages/website/Services";
 import Industries from "./pages/Website/Industries";
-import CaseStudies from "./pages/website/CaseStudies";
-import Careers from "./pages/website/Careers";
-import Contact from "./pages/website/Contact";
+import CaseStudies from "./pages/Website/CaseStudies";
+import Careers from "./pages/Website/Careers";
+import Contact from "./pages/Website/Contact";
 
 import Login from "./pages/auth/Login";
 import Dashboard from "./pages/client/Dashboard";
