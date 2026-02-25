@@ -17,7 +17,6 @@ export default function Contact() {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    // password ko max 8 characters tak hi allow
     if (name === "password" && value.length > 8) return;
 
     setForm({ ...form, [name]: value });
@@ -45,7 +44,6 @@ export default function Contact() {
     <div className="contact-page">
       <div className="contact-wrapper">
 
-        {/* Left panel */}
         <div className="contact-info-panel">
           <h2>Contact Us</h2>
           <p>
@@ -68,7 +66,6 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Right panel */}
         <div className="contact-form-panel">
 
           <div className="form-header">
@@ -102,7 +99,6 @@ export default function Contact() {
                 />
               </div>
 
-              {/* ✅ PASSWORD FIELD (max 8 characters) */}
               <div className="form-group">
                 <label>Password (max 8 characters)</label>
                 <input
