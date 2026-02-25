@@ -1,3 +1,7 @@
+/* ============================= */
+/* ===== NAVBAR MAIN ========== */
+/* ============================= */
+
 .tn-navbar {
   position: sticky;
   top: 0;
@@ -9,16 +13,39 @@
 .tn-navbar-inner {
   max-width: 1200px;
   margin: auto;
-  padding: 14px 24px;
-
+  padding: 18px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-
+/* ============================= */
+/* ===== BRAND SECTION ======== */
+/* ============================= */
 
 .tn-brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* 🔵 ROUND LOGO */
+.tn-logo {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 212, 255, 0.7);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+  transition: 0.3s ease;
+}
+
+.tn-logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.6);
+}
+
+.tn-brand-text {
   display: flex;
   flex-direction: column;
   line-height: 1.1;
@@ -27,109 +54,114 @@
 .tn-brand-main {
   font-size: 22px;
   font-weight: 700;
-  letter-spacing: 0.4px;
   color: #ffffff;
 }
 
 .tn-brand-sub {
-  font-size: 11px;
-  color: #8fdfff;
+  font-size: 13px;
+  color: #00d4ff;
+  letter-spacing: 0.5px;
 }
 
-
+/* ============================= */
+/* ===== MENU SECTION ========= */
+/* ============================= */
 
 .tn-menu {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
 }
 
 .tn-link {
-  position: relative;
   text-decoration: none;
-  font-size: 14.5px;
+  color: #cfeaff;
+  font-size: 15px;
   font-weight: 500;
-  color: #d6ecff;
-  padding: 6px 2px;
-  transition: all 0.25s ease;
+  transition: 0.3s ease;
+  position: relative;
 }
-
 
 .tn-link:hover {
   color: #00d4ff;
 }
 
-
-.tn-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -7px;
-  height: 2px;
-  width: 0%;
-  background: #00d4ff;
-  transition: width 0.25s ease;
-  border-radius: 2px;
-}
-
-.tn-link:hover::after {
-  width: 100%;
-}
-
-
+/* Active link underline */
 .tn-link.active {
   color: #00d4ff;
-  font-weight: 600;
 }
 
 .tn-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
   width: 100%;
+  height: 2px;
+  background: #00d4ff;
+  border-radius: 2px;
 }
 
-
+/* ============================= */
+/* ===== CONTACT BUTTON ======= */
+/* ============================= */
 
 .tn-cta {
-  padding: 8px 18px;
-  border-radius: 999px;
   background: linear-gradient(135deg, #00d4ff, #3bbcff);
-  color: #04132c !important;
+  padding: 9px 20px;
+  border-radius: 30px;
+  color: #001b33 !important;
   font-weight: 600;
-  box-shadow: 0 6px 18px rgba(0, 212, 255, 0.35);
-}
-
-.tn-cta::after {
-  display: none;
+  transition: 0.3s ease;
 }
 
 .tn-cta:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 26px rgba(0, 212, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
 }
 
+/* ============================= */
+/* ===== LOGOUT BUTTON ======== */
+/* ============================= */
 
+.logout-btn {
+  background: #ff4d4d;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
 
-@media (max-width: 900px) {
+.logout-btn:hover {
+  background: #ff1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 77, 77, 0.4);
+}
+
+/* ============================= */
+/* ===== RESPONSIVE =========== */
+/* ============================= */
+
+@media (max-width: 1000px) {
+
   .tn-menu {
     gap: 16px;
   }
 
   .tn-link {
-    font-size: 13.5px;
+    font-size: 14px;
   }
-}
 
-.logout-btn {
-  margin-left: 15px;
-  padding: 8px 16px;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  background: #ef4444;
-  color: white;
-  font-weight: 500;
-  transition: 0.3s;
-}
+  .tn-brand-main {
+    font-size: 18px;
+  }
 
-.logout-btn:hover {
-  background: #dc2626;
+  .tn-logo {
+    width: 50px;
+    height: 50px;
+  }
+
 }

@@ -4,11 +4,13 @@ export default function Home() {
   return (
     <div className="page">
       <section className="hero-section">
-        <h1>Empowering Digital Transformation Through Intelligent Technology</h1>
+        <h1>
+          Empowering Digital Transformation Through Intelligent Technology
+        </h1>
 
         <p>
-          Enterprise-grade web, cloud, CRM, and software solutions engineered to
-          accelerate growth and future-proof your business.
+          Enterprise-grade web, cloud, CRM, and software solutions engineered
+          to accelerate growth and future-proof your business.
         </p>
 
         <div className="hero-buttons">
