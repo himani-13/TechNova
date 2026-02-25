@@ -7,17 +7,17 @@ export default function Services() {
     {
       title: "Custom Web Development",
       description:
-        "We build scalable, secure and high-performance web applications tailored to your business needs. Our solutions include responsive websites, enterprise portals, SaaS platforms, and full-stack development using modern technologies."
+        "We build scalable, secure and high-performance web applications tailored to your business needs. Our solutions include responsive websites, enterprise portals, SaaS platforms, and full-stack development."
     },
     {
       title: "Mobile App Development",
       description:
-        "We design and develop intuitive mobile applications for iOS and Android platforms with strong backend integration, performance optimization, and enterprise-level security."
+        "We design and develop intuitive mobile applications for iOS and Android platforms with strong backend integration and performance optimization."
     },
     {
       title: "API Development & Integration",
       description:
-        "We create secure RESTful APIs and enable seamless integrations including payment gateways, CRM systems, and cloud platforms for scalable operations."
+        "We create secure RESTful APIs and enable seamless integrations including payment gateways, CRM systems, and cloud platforms."
     },
     {
       title: "Cybersecurity & Data Protection",
@@ -32,6 +32,7 @@ export default function Services() {
 
       <div className="services-container">
 
+        {/* LEFT SIDE */}
         <div className="services-content">
           {services.map((service, index) => (
             <div key={index} className="card">
@@ -41,35 +42,11 @@ export default function Services() {
           ))}
         </div>
 
+        {/* RIGHT SIDE VIDEOS */}
         <div className="services-videos">
-
-          <video
-            src={video1}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="service-video"
-          />
-
-          <video
-            src={video2}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="service-video"
-          />
-
-          <video
-            src={video3}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="service-video"
-          />
-
+          <video src={video1} autoPlay loop muted playsInline className="service-video" />
+          <video src={video2} autoPlay loop muted playsInline className="service-video" />
+          <video src={video3} autoPlay loop muted playsInline className="service-video" />
         </div>
 
       </div>
