@@ -7,7 +7,7 @@ export default function About() {
         TechNova Ltd is a London-based digital transformation and technology
         consulting company committed to delivering secure, scalable, and
         performance-driven technology solutions to organisations across the
-        United Kingdom and global markets.
+        United Kingdom and global markets.  
       </p>
 
       <p>

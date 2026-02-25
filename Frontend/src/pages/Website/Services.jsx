@@ -9,7 +9,8 @@ export default function Services() {
     "API Development & Integration",
     "E-Commerce Development",
     "UI/UX Design & Product Strategy",
-    "Cybersecurity & Data Protection",
+    "Cybersecurity & Data Protection",    
+    
   ];
 
   return (
@@ -29,4 +30,4 @@ export default function Services() {
       </div>
     </div>
   );
- }
+ }                                   

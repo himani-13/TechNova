@@ -1,18 +1,23 @@
+
 import { Routes, Route } from "react-router-dom";
 
 import WebsiteLayout from "./components/WebsiteLayout";
 
+// ===== Website pages =====
 import Home from "./pages/Website/Home";
-import About from "./pages/website/About";
-import Services from "./pages/website/Services";
+import About from "./pages/Website/About";
+import Services from "./pages/Website/Services";
 import Industries from "./pages/Website/Industries";
 import CaseStudies from "./pages/Website/CaseStudies";
 import Careers from "./pages/Website/Careers";
 import Contact from "./pages/Website/Contact";
 
 import Login from "./pages/auth/Login";
+
+
 import Dashboard from "./pages/client/Dashboard";
 import ProjectDetail from "./pages/client/ProjectDetail";
+
 
 import Leads from "./pages/admin/Leads";
 import ServicesAdmin from "./pages/admin/ServicesAdmin";
@@ -31,7 +36,7 @@ export default function App() {
         <Route path="/industries" element={<Industries />} />
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/careers" element={<Careers />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={<Contact />} /> 
       </Route>
 
       {/* Auth */}
