@@ -1,23 +1,28 @@
 import { NavLink, useNavigate } from "react-router-dom";
+import logo from "../assets/technova-logo.png";
 import "./navbar.css";
 
 export default function Navbar() {
-
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    navigate("/");  
+    navigate("/");
   };
 
   return (
     <header className="tn-navbar">
       <div className="tn-navbar-inner">
 
+        {/* LOGO SECTION */}
         <div className="tn-brand">
-          <span className="tn-brand-main">TechNova</span>
-          <span className="tn-brand-sub">Engineering Excellence</span>
+          <img src={logo} alt="TechNova Logo" className="tn-logo" />
+          <div className="tn-brand-text">
+            <span className="tn-brand-main">TechNova</span>
+            <span className="tn-brand-sub">Engineering Excellence</span>
+          </div>
         </div>
 
+        {/* MENU */}
         <nav className="tn-menu">
           <NavLink to="/corporate" end className="tn-link">
             Home
@@ -50,10 +55,9 @@ export default function Navbar() {
           <button className="logout-btn" onClick={handleLogout}>
             Logout
           </button>
-
         </nav>
 
       </div>
     </header>
   );
-} 
+}  
