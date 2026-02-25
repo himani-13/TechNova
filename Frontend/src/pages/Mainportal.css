@@ -1,0 +1,61 @@
+.portal-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #0a1f44);
+}
+
+.portal-card {
+  background: #111c36;
+  padding: 50px;
+  border-radius: 12px;
+  text-align: center;
+  width: 420px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.portal-title {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.portal-subtitle {
+  color: #94a3b8;
+  margin-bottom: 30px;
+}
+
+.portal-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.portal-btn {
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.portal-btn.corporate {
+  background: #38bdf8;
+  color: black;
+}
+
+.portal-btn.client {
+  background: #22c55e;
+  color: white;
+}
+
+.portal-btn.admin {
+  background: #ef4444;
+  color: white;
+}
+
+.portal-btn:hover {
+  transform: scale(1.05);
+}
