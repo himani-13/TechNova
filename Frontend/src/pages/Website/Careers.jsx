@@ -37,4 +37,4 @@ export default function Careers() {
       </p>
     </div>
   );
-}
+ }
