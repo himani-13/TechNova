@@ -1,4 +1,6 @@
-
+/* ============================= */
+/* ===== NAVBAR CONTAINER ===== */
+/* ============================= */
 
 .tn-navbar {
   position: sticky;
@@ -27,7 +29,7 @@
   gap: 18px;
 }
 
-/* 🔵 ROUND LOGO */
+/* ROUND LOGO */
 .tn-logo {
   width: 65px;
   height: 65px;
@@ -85,6 +87,7 @@
 }
 
 /* Active link underline */
+
 .tn-link.active {
   color: #00d4ff;
 }
@@ -145,7 +148,14 @@
 
 @media (max-width: 1000px) {
 
+  .tn-navbar-inner {
+    flex-direction: column;
+    gap: 15px;
+  }
+
   .tn-menu {
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 16px;
   }
 
@@ -162,6 +172,4 @@
     height: 50px;
   }
 
-.logout-btn:hover {
-  background: #dc2626;
-} 
+}
