@@ -9,7 +9,7 @@ export default function About() {
         performance-driven technology solutions to organisations across the
         United Kingdom and global markets.  
       </p>
-
+   
       <p>
         Founded with the vision of bridging business strategy with intelligent
         engineering, TechNova operates at the intersection of innovation and
