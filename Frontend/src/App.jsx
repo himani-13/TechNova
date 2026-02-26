@@ -13,7 +13,11 @@ import Contact from "./pages/Website/Contact";
 export default function App() {
   return (
     <Routes>
-      
+
+      {/* Redirect root to corporate */}
+      <Route path="/" element={<Navigate to="/corporate" replace />} />
+
+      {/* Corporate Website */}
       <Route path="/corporate" element={<WebsiteLayout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
@@ -24,7 +28,7 @@ export default function App() {
         <Route path="contact" element={<Contact />} />
       </Route>
 
-      
+      {/* Optional Short Links */}
       <Route
         path="/services"
         element={<Navigate to="/corporate/services" replace />}
@@ -34,6 +38,9 @@ export default function App() {
         element={<Navigate to="/corporate/contact" replace />}
       />
 
+      {/* Fallback */}
+      <Route path="*" element={<Navigate to="/corporate" replace />} />
+
     </Routes>
   );
-}  
+}
