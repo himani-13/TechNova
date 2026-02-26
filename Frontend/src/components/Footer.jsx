@@ -19,12 +19,27 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Quick Links</h4>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/industries">Industries</Link></li>
-            <li><Link to="/case-studies">Case Studies</Link></li>
-            <li><Link to="/careers">Careers</Link></li>
+            <li>
+              <Link to="/corporate">Home</Link>
+            </li>
+            <li>
+              <Link to="/corporate/about">About</Link>
+            </li>
+            <li>
+              <Link to="/corporate/services">Services</Link>
+            </li>
+            <li>
+              <Link to="/corporate/industries">Industries</Link>
+            </li>
+            <li>
+              <Link to="/corporate/case-studies">Case Studies</Link>
+            </li>
+            <li>
+              <Link to="/corporate/careers">Careers</Link>
+            </li>
+            <li>
+              <Link to="/corporate/contact">Contact</Link>
+            </li>
           </ul>
         </div>
 
@@ -43,9 +58,15 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Legal</h4>
           <ul>
-            <li><Link to="#">Privacy Policy</Link></li>
-            <li><Link to="#">Terms & Conditions</Link></li>
-            <li><Link to="#">Cookie Policy</Link></li>
+            <li>
+              <Link to="#">Privacy Policy</Link>
+            </li>
+            <li>
+              <Link to="#">Terms & Conditions</Link>
+            </li>
+            <li>
+              <Link to="#">Cookie Policy</Link>
+            </li>
           </ul>
         </div>
 

@@ -32,7 +32,7 @@ export default function Services() {
 
       <div className="services-container">
 
-        {/* LEFT SIDE */}
+        
         <div className="services-content">
           {services.map((service, index) => (
             <div key={index} className="card">
@@ -42,7 +42,7 @@ export default function Services() {
           ))}
         </div>
 
-        {/* RIGHT SIDE VIDEOS */}
+        
         <div className="services-videos">
           <video src={video1} autoPlay loop muted playsInline className="service-video" />
           <video src={video2} autoPlay loop muted playsInline className="service-video" />

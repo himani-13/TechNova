@@ -1,8 +1,8 @@
-
 import { useState } from "react";
 import "./Contact.css";
 
 export default function Contact() {
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -25,8 +25,29 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(form);
-    alert("Form submitted successfully");
+    const storedLeads =
+      JSON.parse(localStorage.getItem("adminLeads")) || [];
+
+    const newLead = {
+      id: Date.now(),
+      name: form.name,
+      email: form.email,
+      service: form.service,
+      status: "New",
+      phone: form.phone,
+      company: form.company,
+      budget: form.budget,
+      message: form.message
+    };
+
+    const updatedLeads = [newLead, ...storedLeads];
+
+    localStorage.setItem(
+      "adminLeads",
+      JSON.stringify(updatedLeads)
+    );
+
+    alert("Your enquiry has been sent successfully.");
 
     setForm({
       name: "",
@@ -44,24 +65,30 @@ export default function Contact() {
     <div className="contact-page">
       <div className="contact-wrapper">
 
+      
         <div className="contact-info-panel">
-          <h2>Contact Us</h2>
+          <h2>TechNova Ltd</h2>
+
           <p>
-            Please fill the form and our team will contact you shortly.
+            124 City Road<br />
+            London, EC1V 2NX<br />
+            United Kingdom
           </p>
 
           <div className="contact-meta">
             <div>
               <span>Email</span>
-              <p>info@technova.com</p>
+              <p>info@technova-uk.com</p>
             </div>
+
             <div>
               <span>Phone</span>
-              <p>+91 98765 43210</p>
+              <p>+44 20 7946 0857</p>
             </div>
+
             <div>
-              <span>Location</span>
-              <p>Ahmedabad, India</p>
+              <span>Company Registration No</span>
+              <p>14873291</p>
             </div>
           </div>
         </div>
