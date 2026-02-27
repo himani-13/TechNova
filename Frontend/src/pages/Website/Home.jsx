@@ -14,15 +14,15 @@ export default function Home() {
         </p>
 
         <div className="hero-buttons">
-          <Link to="/contact" className="btn-primary">
+          <Link to="/corporate/contact" className="btn-primary">
             Get a Consultation
           </Link>
 
-          <Link to="/services" className="btn-secondary">
+          <Link to="/corporate/services" className="btn-secondary">
             Explore Our Services
           </Link>
         </div>
       </section>
     </div>
   );
-} 
+}
